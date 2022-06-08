@@ -19,7 +19,17 @@
     font-weight: 600;
 }
 
+.container {
+    display: grid;
+    grid-template-areas:"menu user"
+                        "menu general";
+    grid-template-columns: 20rem 1fr;
+    grid-template-rows: auto 1fr;
+}
+
 .menu {
+    grid-area: menu;
+    height: 100vh;
     background-color: var(--menu-bg);
     padding-top: 2rem;
     color: #ffffff;
@@ -70,6 +80,7 @@
 }
 
 .profile-section {
+    grid-area: user;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
@@ -182,4 +193,8 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.general {
+    grid-area: general;
 }
